@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.navbar .logo {
+  font-size: 2em;
+  color: #f9a825;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #f9a825;
+}
+
+/* Hero Section with Parallax */
+.hero {
+  height: 100vh;
+  background: url('https://media.istockphoto.com/id/1325623270/photo/rows-of-solar-panels-and-wind-turbines-on-the-plain.jpg?s=612x612&w=0&k=20&c=TOKQ5M2FcJ_aFM2t39indKWaidLjGOWRnJFFX4HPsv8=') center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+
+/* Hero Caption Text Styling */
+.hero-caption {
+  position: absolute;
+  bottom: 500px;
+  text-align: center;
+  width: 100%;
+  animation: fadeUp 2s ease forwards;
+}
+
+/* Rainbow Gradient Text */
+.rainbow-text {
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8f00ff
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowMove 6s linear infinite, glow 2s ease-in-out infinite alternate;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+/* Smaller text for second line */
+.hero-caption h2 {
+  font-size: 5em;
+  margin-top: 10px;
+}
+
+/* Animated rainbow movement */
+@keyframes rainbowMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Soft glowing animation */
+@keyframes glow {
+  from { text-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+  to { text-shadow: 0 0 35px rgba(255, 255, 255, 0.8); }
+}
+
+/* Fade-up effect (already used) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+/* WhatsApp Floating Button (like candi.solar) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1);
+}
+
+
+
+/* Section Styling */
+section {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Projects Grid */
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+
+/* Footer */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9em;
+}
+
+/* Fade Animations */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Modern Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;  /* Increased size */
+  height: 80px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: all 0.3s ease;
+  animation: popUp 1s ease-out;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+  width: 50px;  /* Bigger icon inside */
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Subtle entrance animation */
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Vision & Mission Section */
+.vision-mission-section {
+  background: linear-gradient(135deg, #ff8c00, #ffa733, #ffd54f);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smooth entrance animation */
+.vision-mission-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+/* Title Styling */
+.section-title {
+  font-size: 2.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  background: linear-gradient(to right, #fff, #ffecb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+/* Paragraph Styling */
+.section-text {
+  font-size: 1.4em;
+  line-height: 1.8;
+  margin: 30px auto;
+  max-width: 850px;
+  color: #fffaf0;
+  font-weight: 400;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* Keyframes for fade & glow */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  to { text-shadow: 0 0 20px rgba(255,255,255,0.9); }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.sun-bg {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80px;
+  opacity: 0.1;
+  animation: floatSun 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatSun {
+  from { transform: translateY(0); }
+  to { transform: translateY(20px); }
+}
+/* Services Section */
+.services-section {
+  background: linear-gradient(135deg, #ff8800, #ffb347, #ffd580);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Heading */
+.services-title {
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #ffffff, #fff4d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: glowTitle 2s ease-in-out infinite alternate;
+}
+
+/* Subtitle */
+.services-subtitle {
+  font-size: 1.5em;
+  color: #fff8e1;
+  margin-bottom: 60px;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Card Images */
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* Card Headings */
+.service-card h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fffaf0;
+}
+
+/* Card Paragraph */
+.service-card p {
+  font-size: 1.1em;
+  color: #fffaf0;
+  line-height: 1.7;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowTitle {
+  from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); }
+  to { text-shadow: 0 0 25px rgba(255, 255, 255, 0.8); }
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
