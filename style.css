@@ -5,30 +5,41 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+/* ===== Global Dark Theme ===== */
+body {
+  background-color: #080111;  /* Pure black background */
+  color: #ffffff;             /* White text for readability */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
+  background: #080111;
   padding: 20px 60px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+
 }
 
 .navbar.scrolled {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  background: #fff;
+  background:#080111;
 }
 
 .navbar .logo {
-  font-size: 2em;
-  color: #f9a825;
-  font-weight: 700;
+  font-size: 3em;
+  color: #29eb39;
+  font-weight: 800;
 }
 
 .navbar ul {
@@ -38,9 +49,9 @@
 
 .navbar li a {
   text-decoration: none;
-  color: #333;
+  color:#29eb39;
   margin-left: 25px;
-  font-weight: 500;
+  font-weight: 800;
   transition: color 0.3s ease;
 }
 
@@ -59,7 +70,7 @@
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(27, 189, 68, 0.45);
   width: 100%;
   height: 100%;
   display: flex;
@@ -68,7 +79,7 @@
 }
 
 .hero-text {
-  color: #fff;
+  color: #25c93a;
   text-align: center;
   padding: 30px;
 }
@@ -85,22 +96,17 @@
 
 /* Rainbow Gradient Text */
 .rainbow-text {
-  font-size: 5em;
+  font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase;
   background: linear-gradient(
     90deg,
-    #ff0000,
-    #ff7f00,
-    #ffff00,
     #00ff00,
-    #0000ff,
-    #4b0082,
-    #8f00ff
+    
   );
   background-size: 400% 100%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
   animation: rainbowMove 6s linear infinite, glow 2s ease-in-out infinite alternate;
   letter-spacing: 2px;
   line-height: 1.3;
@@ -108,8 +114,9 @@
 
 /* Smaller text for second line */
 .hero-caption h2 {
-  font-size: 5em;
+  font-size: 1.5em;
   margin-top: 10px;
+  color:#20a720;
 }
 
 /* Animated rainbow movement */
@@ -133,6 +140,7 @@
 .hero-text p {
   font-size: 1.3em;
   margin-bottom: 30px;
+  color:#00ff00
 }
 /* WhatsApp Floating Button (like candi.solar) */
 .whatsapp-float {
@@ -171,8 +179,8 @@ section {
 }
 
 h2 {
-  font-size: 2.2em;
-  color: #333;
+  font-size: 1em;
+  color: #1fac3d;
   margin-bottom: 20px;
 }
 
@@ -200,11 +208,11 @@ h2 {
 
 /* Footer */
 footer {
-  background: #111;
-  color: #aaa;
+  background:#080111;
+  color: #fcf9f9;
   text-align: center;
   padding: 25px;
-  font-size: 0.9em;
+  font-size: 1.9em;
 }
 
 /* Fade Animations */
@@ -444,4 +452,451 @@ footer {
 @keyframes floatIcon {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+}
+
+/* Section Styling */
+.free-consultation {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 900px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: relative;
+  font-size: 3rem;
+}
+
+.free-consultation .hero-text {
+  font-size: 5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #ffcc00;
+  text-shadow: 0 0 20px rgba(255, 200, 0, 0.5);
+}
+
+.consultation-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Popup box hidden by default */
+.popup-box {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff8c00, #ffbb33);
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  width: 380px;
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.6);
+  animation: fadeIn 0.5s ease;
+  z-index: 99;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Show popup on hover */
+.consultation-text:hover .popup-box {
+  display: block;
+}
+
+/* Little arrow pointer */
+.popup-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffbb33 transparent transparent transparent;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Optional floating animation for text */
+.consultation-text span {
+  display: inline-block;
+  animation: floatText 3s ease-in-out infinite;
+  background: linear-gradient(90deg, #ffcc00, #ff6600, #ffaa00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+/* Section layout */
+.free-consultation {
+  text-align: center;
+  color: #fff;
+  margin: 80px auto;
+  max-width: 900px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Hero text rainbow animation */
+.hero-text {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 3s linear infinite;
+  background-size: 400%;
+}
+@keyframes rainbow {
+  to { background-position: 400%; }
+}
+
+/* Subheading */
+.consult-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+}
+
+/* Read more area */
+.readmore-area {
+  position: relative;
+  display: inline-block;
+}
+
+/* Smiley icon */
+.readmore-icon {
+  margin-left: 8px;
+  font-size: 5rem;
+  cursor: pointer;
+  animation: bounce 2.5s infinite ease-in-out;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.readmore-icon:hover {
+  transform: scale(1.3);
+}
+
+/* Bouncy animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Hidden popup */
+.consult-popup {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: linear-gradient(135deg, #ff8c00, #ffbb33);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px 30px;
+  width: 340px;
+  box-shadow: 0 0 25px rgba(255,165,0,0.7);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: left;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+/* Show popup on hover */
+.readmore-area:hover .consult-popup {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+/* 100% Icon Styling */
+.percent-icon {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #a2ec0e;
+ 
+  padding: 8px 18px;
+  border-radius: 12px;
+  margin-right: 10px;
+  text-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+/* Glow Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.7), 0 0 30px rgba(255, 100, 0, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 180, 0, 1), 0 0 60px rgba(255, 140, 0, 0.8);
+    transform: scale(1.1);
+  }
+}
+/* FAQ Section Styling */
+.faq-section {
+  background-color:#080111;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  color: #ffb84d;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Each FAQ Item */
+.faq-item {
+  background: #080111;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ff8c00;
+  transition: all 0.3s ease;
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  background: none;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: rgba(255, 140, 0, 0.15);
+}
+
+/* Plus Icon */
+.faq-icon {
+  font-size: 1.8rem;
+  color: #ffb84d;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Answer */
+.faq-answer {
+  display: none;
+  padding: 20px;
+  background:#080111;;
+  border-top: 1px solid #ffb84d;
+  line-height: 1.6;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Active State */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: #ff9800;
+}
+/* --- Blog Modal Popup --- */
+.blog-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.blog-content {
+  background: linear-gradient(135deg, #ff9800, #ffb84d);
+  color: #000;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  width: 90%;
+  text-align: left;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.7);
+  transform: translateY(50px);
+  animation: slideUp 0.4s ease forwards;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.blog-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blog-post {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+}
+
+.blog-post h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.close-blog {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-blog:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; } 
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* --- Contact Section (matches "Our Services") --- */
+.contact-section {
+  background: linear-gradient(135deg, #ff9800, #ffb84d);
+  color: #000;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1900px;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.5);
+}
+
+.contact-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  color: #000;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #fff;
+  color: #000;
+  width: 250px;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255,165,0,0.6);
+}
+
+.contact-card i {
+  font-size: 2.2rem;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.contact-form {
+  margin-top: 60px;
+  max-width: 600px;
+  background: #000;
+  color: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(255,165,0,0.5);
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #ff9800;
+  border: none
 }

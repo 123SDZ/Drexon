@@ -27,7 +27,7 @@ const fadeInOnScroll = () => {
   });
 };
 
+
 window.addEventListener('scroll', fadeInOnScroll);
 fadeInOnScroll(); // Trigger on load
-
 
