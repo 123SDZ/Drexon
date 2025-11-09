@@ -67,11 +67,13 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  color:orange;
 }
 
 .hero-overlay {
-  background: rgba(27, 189, 68, 0.45);
+  background: orange;
   width: 100%;
+  color: orange;
   height: 100%;
   display: flex;
   align-items: center;
@@ -79,7 +81,7 @@ body {
 }
 
 .hero-text {
-  color: #25c93a;
+  color: orange;
   text-align: center;
   padding: 30px;
 }
@@ -101,7 +103,7 @@ body {
   text-transform: uppercase;
   background: linear-gradient(
     90deg,
-    #00ff00,
+    orange,
     
   );
   background-size: 400% 100%;
@@ -116,7 +118,7 @@ body {
 .hero-caption h2 {
   font-size: 1.5em;
   margin-top: 10px;
-  color:#20a720;
+  color:rgb(252, 172, 23);
 }
 
 /* Animated rainbow movement */
@@ -140,7 +142,7 @@ body {
 .hero-text p {
   font-size: 1.3em;
   margin-bottom: 30px;
-  color:#00ff00
+  color:orange;
 }
 /* WhatsApp Floating Button (like candi.solar) */
 .whatsapp-float {
@@ -180,7 +182,7 @@ section {
 
 h2 {
   font-size: 1em;
-  color: #1fac3d;
+  color: orange;
   margin-bottom: 20px;
 }
 
@@ -469,7 +471,7 @@ footer {
   font-size: 5rem;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: #1cf31c;
+  color: orange;
   text-shadow: 0 0 20px rgba(255, 200, 0, 0.5);
 }
 
@@ -825,13 +827,14 @@ footer {
   font-size: 2.8rem;
   margin-bottom: 20px;
   font-weight: bold;
+  color:whitesmoke;
 }
 
 .contact-intro {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto 50px auto;
-  color: #fcf8f8;
+  color: whitesmoke;
 }
 
 .contact-container {
@@ -868,17 +871,6 @@ footer {
   font-weight: 600;
 }
 
-.contact-form {
-  margin-top: 60px;
-  max-width: 600px;
-  background: #000;
-  color: #fff;
-  border-radius: 15px;
-  padding: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 20px rgba(255,165,0,0.5);
-}
 
 .contact-form h3 {
   margin-bottom: 20px;
@@ -899,4 +891,177 @@ footer {
 .contact-form button {
   background: #ff9800;
   border: none
+}
+/* --- Contact Section (Dynamic Routing) --- */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Make cards clickable and styled as links */
+.contact-card {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  width: 300px;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  background: #ff9800;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255,165,0,0.6);
+}
+
+.contact-card i {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-card:hover i {
+  color: #fff;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.contact-card p {
+  font-size: 1rem;
+}
+
+/* Static card (address) stays non-clickable */
+.contact-card {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  width: 300px;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.contact-card i.fab.fa-linkedin {
+  color: #0077b5;
+}
+
+.contact-card i.fas.fa-blog {
+  color: #ff5722;
+}
+
+.contact-card:hover i.fas.fa-blog {
+  color: #ff9800;;
+}
+/* Read More Button (About Section) */
+.read-more-container {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.read-more-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #ffa726;
+  transform: scale(1.05);
+}
+
+/* Slider Overlay */
+.slider-overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  z-index: 1000;
+  transition: width 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Slider Content */
+.slider-content {
+  background: linear-gradient(135deg, #ff9800, #ffb84d);
+  color: #fcf9f9;
+  width: 400px;
+  max-width: 800px;
+  height: 100%;
+  padding: 40px;
+  border-radius: 20px 0 0 20px;
+  box-shadow: -4px 0 20px rgba(255, 165, 0, 0.4);
+  transition: width 0.6s ease;
+  overflow-y: auto;
+  position: relative;
+}
+
+.slider-overlay.active {
+  width: 100%;
+}
+
+.slider-overlay.active .slider-content {
+  width: 800px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+.slider-content h3 {
+  margin-top: 40px;
+  font-size: 1.8rem;
+}
+
+.slider-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.hero-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fc9d0e;
+  text-shadow: 2px 2px 6px rgba(194, 152, 152, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 15px;
+  animation: glowText 2s ease-in-out infinite alternate;
 }
