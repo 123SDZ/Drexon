@@ -31,3 +31,8 @@ const fadeInOnScroll = () => {
 window.addEventListener('scroll', fadeInOnScroll);
 fadeInOnScroll(); // Trigger on load
 
+function toggleFreeConsultationSlider() {
+  const slider = document.getElementById("freeConsultationSlider");
+  slider.style.display = slider.style.display === "block" ? "none" : "block";
+}
+

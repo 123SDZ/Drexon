@@ -8,7 +8,6 @@
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
 </head>
 <body>
   <!-- Navbar -->
@@ -18,7 +17,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#services">Services</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
 
@@ -28,35 +27,43 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <!-- Text Overlay -->
-     <section class="free-consultation">
-       <h2 class="hero-text">
-      🌞 जब Drexon हो साथ, तो बिजली बिल हो जाए माफ! ⚡
-    </h2>
+    <!-- Free Consultation Section -->
+<section class="free-consultation">
+  <h3 class="hero-text" style="color: orange;">
+    ड्रेक्सन का हो साथ, तो बिजली बिल साफ़!
+    <button class="read-more-btn" onclick="toggleFreeConsultationSlider()">
+    Read More →
+  </button>
+  </h3> <!-- Read More Button -->
+  
 
-  <h3 class="consult-heading">
-  <span class="percent-icon">100%</span>
-  Free Consultation
-  <span class="readmore-area">
-    <span class="readmore-icon">😊</span>
-    <div class="consult-popup">
-      🌞 <strong>Why Choose Our Consultancy Services?</strong><br><br>
+  <!-- SLIDER POPUP (Hidden until Read More is clicked) -->
+<div id="freeConsultationSlider" class="slider">
+  <div class="slider-content">
+    <span class="close-btn" onclick="toggleFreeConsultationSlider()">&times;</span>
+    <h3>🌞Free Consultation</h3><br>
+    <p>Why Choose Our Consultancy Services?<p><br>
+      Why Choose Our Consultancy Services?<br>
       When you directly approach a vendor for installing a solar plant on your rooftop or land, their suggestions often focus on maximizing their own profit. At Drexon Renewable Energy Pvt. Ltd., our goal is different — we work for your benefit.
 
 We provide independent consultancy to help you choose the best and most cost-effective system design, components, and technology mix. Our focus is on ensuring maximum return on investment (ROI) through optimized system performance and high-quality Balance of System (BOS) components.
 
-Our consultancy services are completely free for individual and domestic solar projects, so before you finalize your vendor — consult with Drexon and make a smarter solar investment..<br><br>
-      ☀️ <strong>हमारी कंसल्टेंसी सेवाएँ क्यों चुनें?</strong><br><br>
-      जब आप सीधे किसी वेंडर से अपनी छत या खाली भूमि पर सोलर प्लांट लगवाने जाते हैं, तो उनकी सलाह अक्सर उनके स्वयं के लाभ को ध्यान में रखकर दी जाती है।
+Our consultancy services are completely free for individual and domestic solar projects, so before you finalize your vendor — consult with Drexon and make a smarter solar investment.
+<p>
+ </p><br>
+      <p>हमारी कंसल्टेंसी सेवाएँ क्यों चुनें?</p><br>
+<p> 
+जब आप सीधे किसी वेंडर से अपनी छत या खाली भूमि पर सोलर प्लांट लगवाने जाते हैं, तो उनकी सलाह अक्सर उनके स्वयं के लाभ को ध्यान में रखकर दी जाती है।
 Drexon Renewable Energy Pvt. Ltd. में हमारा उद्देश्य बिल्कुल अलग है — हम आपके लाभ के लिए काम करते हैं।
 
 हम आपको स्वतंत्र कंसल्टेंसी सेवाएँ प्रदान करते हैं ताकि आप अपने प्रोजेक्ट के लिए सबसे बेहतर और किफायती सिस्टम डिज़ाइन, उपकरण और तकनीकी समाधान चुन सकें। हमारा मुख्य लक्ष्य है कि आपके निवेश पर अधिकतम लाभ (ROI) सुनिश्चित किया जा सके, जिसके लिए हम उच्च गुणवत्ता वाले Balance of System (BOS) कंपोनेंट्स और अनुकूल डिज़ाइन प्रदान करते हैं।
 
 हमारी कंसल्टेंसी सेवाएँ व्यक्तिगत एवं घरेलू सोलर प्रोजेक्ट्स के लिए पूर्णतः निःशुल्क हैं।
-इसलिए, किसी वेंडर को अंतिम रूप देने से पहले — Drexon से परामर्श लें और समझदारी से सोलर निवेश करें।
- </div>
-  </span>
-</h3>
+इसलिए, किसी वेंडर को अंतिम रूप देने से पहले — Drexon से परामर्श लें और समझदारी से सोलर निवेश करें।</p>
+    </p>
+  </div>
+</div>
+ 
 </section>
 </section>
   <!-- About Section -->
@@ -105,26 +112,6 @@ Whether it’s rooftop solar, industrial decarbonization, or customized renewabl
 
 Drexon Renewables Pvt. Ltd. — Powering Progress, Sustaining the Future.
       <br><br>
-     <h3>🌞Why Choose Our Consultancy Services?</h3>
-    <p>
-      Why Choose Our Consultancy Services?
-
-When you directly approach a vendor for installing a solar plant on your rooftop or land, their suggestions often focus on maximizing their own profit. At Drexon Renewable Energy Pvt. Ltd., our goal is different — we work for your benefit.
-
-We provide independent consultancy to help you choose the best and most cost-effective system design, components, and technology mix. Our focus is on ensuring maximum return on investment (ROI) through optimized system performance and high-quality Balance of System (BOS) components.
-
-Our consultancy services are completely free for individual and domestic solar projects, so before you finalize your vendor — consult with Drexon and make a smarter solar investment.
- </p>
- <br><br>
- <h3>🌞हमारी कंसल्टेंसी सेवाएँ क्यों चुनें?</h3>
-<p> 
-जब आप सीधे किसी वेंडर से अपनी छत या खाली भूमि पर सोलर प्लांट लगवाने जाते हैं, तो उनकी सलाह अक्सर उनके स्वयं के लाभ को ध्यान में रखकर दी जाती है।
-Drexon Renewable Energy Pvt. Ltd. में हमारा उद्देश्य बिल्कुल अलग है — हम आपके लाभ के लिए काम करते हैं।
-
-हम आपको स्वतंत्र कंसल्टेंसी सेवाएँ प्रदान करते हैं ताकि आप अपने प्रोजेक्ट के लिए सबसे बेहतर और किफायती सिस्टम डिज़ाइन, उपकरण और तकनीकी समाधान चुन सकें। हमारा मुख्य लक्ष्य है कि आपके निवेश पर अधिकतम लाभ (ROI) सुनिश्चित किया जा सके, जिसके लिए हम उच्च गुणवत्ता वाले Balance of System (BOS) कंपोनेंट्स और अनुकूल डिज़ाइन प्रदान करते हैं।
-
-हमारी कंसल्टेंसी सेवाएँ व्यक्तिगत एवं घरेलू सोलर प्रोजेक्ट्स के लिए पूर्णतः निःशुल्क हैं।
-इसलिए, किसी वेंडर को अंतिम रूप देने से पहले — Drexon से परामर्श लें और समझदारी से सोलर निवेश करें।</p>
   </div>
 </div>
 
@@ -353,7 +340,7 @@ Our goal is to ensure that transitioning to solar is not just a wise financial d
   <script src="script.js"></script>
 
   <!-- Floating WhatsApp Chat Button (Modern Icon) -->
-<a href="https://wa.me/918410249658" 
+<a href="https://wa.me/918979302620" 
    class="whatsapp-float"
    target="blank"
    aria-label="Chat on WhatsApp">

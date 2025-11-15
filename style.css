@@ -141,8 +141,7 @@ body {
 
 .hero-text p {
   font-size: 1.3em;
-  margin-bottom: 30px;
-  color:orange;
+  margin-bottom: 30px;;
 }
 /* WhatsApp Floating Button (like candi.solar) */
 .whatsapp-float {
@@ -471,7 +470,6 @@ footer {
   font-size: 5rem;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: orange;
   text-shadow: 0 0 20px rgba(255, 200, 0, 0.5);
 }
 
@@ -551,16 +549,7 @@ footer {
 }
 
 /* Hero text rainbow animation */
-.hero-text {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: rainbow 3s linear infinite;
-  background-size: 400%;
-}
+
 @keyframes rainbow {
   to { background-position: 400%; }
 }
@@ -568,7 +557,7 @@ footer {
 /* Subheading */
 .consult-heading {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 800px;
   display: inline-block;
   position: relative;
 }
@@ -998,7 +987,6 @@ footer {
   right: 0;
   width: 0;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   z-index: 1000;
   transition: width 0.6s ease;
@@ -1009,9 +997,9 @@ footer {
 
 /* Slider Content */
 .slider-content {
-  background: linear-gradient(135deg, #ff9800, #ffb84d);
+  background: linear-gradient(135deg, #ff9800);
   color: #fcf9f9;
-  width: 400px;
+  width: 800px;
   max-width: 800px;
   height: 100%;
   padding: 40px;
@@ -1020,6 +1008,8 @@ footer {
   transition: width 0.6s ease;
   overflow-y: auto;
   position: relative;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 .slider-overlay.active {
@@ -1047,7 +1037,7 @@ footer {
 
 .slider-content h3 {
   margin-top: 40px;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 .slider-content p {
@@ -1065,3 +1055,87 @@ footer {
   border-radius: 15px;
   animation: glowText 2s ease-in-out infinite alternate;
 }
+
+/* Slider Window */
+/* Slider Window */
+.slider {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 800px;
+  max-width: 800px;
+  height: 100%;
+  animation: slideIn 0.3s forwards;
+  z-index: 1000;
+
+  overflow-y: auto;   /* SCROLL FIX */
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+}
+
+/* Content inside slider */
+.slider-content {
+  text-align: center;      /* center text */
+  padding-bottom: 50px;    /* space for scrolling */
+  margin-top: 20px;        /* remove vertical centering that blocked scroll */
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+
+
+.slider-content {
+  text-align: center;
+  width: 100%;
+
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(14, 14, 14);
+  font-weight: bold;
+}
+
+.read-more-btn {
+  background: orange;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+  from { right: -800px; }
+  to { right: 0; }
+}
+
+
