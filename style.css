@@ -1139,3 +1139,104 @@ footer {
 }
 
 
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .vision-mission-section {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .section-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .sun-bg {
+    width: 80px;
+  }
+}
+@media (max-width: 900px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-icon {
+    width: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .faq-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .whatsapp-icon {
+    width: 55px;
+    height: 55px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .slider-content {
+    font-size: 18px;
+  }
+
+  .close-btn {
+    font-size: 30px;
+  }
+}
