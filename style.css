@@ -467,7 +467,7 @@ footer {
 }
 
 .free-consultation .hero-text {
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 15px;
   text-transform: uppercase;
   text-shadow: 0 0 20px rgba(255, 200, 0, 0.5);
@@ -478,7 +478,7 @@ footer {
   display: inline-block;
   cursor: pointer;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -964,12 +964,12 @@ footer {
 }
 
 .read-more-btn {
-  background: #ff9800;
+  background: #0a0a0a;
   color: white;
   border: none;
   padding: 12px 25px;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: 1.8rem;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -1036,8 +1036,8 @@ footer {
 }
 
 .slider-content h3 {
-  margin-top: 40px;
-  font-size: 3rem;
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
 .slider-content p {
@@ -1079,7 +1079,8 @@ footer {
 .slider-content {
   text-align: center;      /* center text */
   padding-bottom: 50px;    /* space for scrolling */
-  margin-top: 20px;        /* remove vertical centering that blocked scroll */
+  margin-top: 20px; 
+  display: block:       /* remove vertical centering that blocked scroll */
 }
 
 /* Close button */
@@ -1240,3 +1241,72 @@ img {
     font-size: 30px;
   }
 }
+
+/* Breadcrumb Navigation */
+.breadcrumb-navbar {
+  width: 100%;
+  background: #000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;   /* Moves nav to right */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00ff22;
+}
+
+.breadcrumb-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.breadcrumb-nav ul li {
+  font-size: 20px;
+  color: #020202;
+  
+}
+
+.breadcrumb-nav a {
+  text-decoration: none;
+  color: #00ff22;
+  transition: 0.3s;
+}
+
+.breadcrumb-nav a:hover {
+  color: #ff8c00;
+  text-shadow: 0 0 10px #ff8c00;
+}
+
+.divider {
+  color: #ff8c00;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .breadcrumb-navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .breadcrumb-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-nav ul {
+    font-size: 14px;
+  }
+}
+
