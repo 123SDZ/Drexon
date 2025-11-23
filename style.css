@@ -62,17 +62,30 @@ body {
 /* Hero Section with Parallax */
 .hero {
   height: 100vh;
-  background: url('https://media.istockphoto.com/id/1325623270/photo/rows-of-solar-panels-and-wind-turbines-on-the-plain.jpg?s=612x612&w=0&k=20&c=TOKQ5M2FcJ_aFM2t39indKWaidLjGOWRnJFFX4HPsv8=') center/cover fixed;
+  width: 100%;
+  background-image: url("image/IMG-20251122-WA0031.jpg");
+  background-size: contain;        /* Makes image cover entire section */
+  background-position: center;   /* Keeps important area centered */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  background-attachment: fixed;  /* Parallax effect – remove if not needed */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color:orange;
+  color: orange;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    background-attachment: scroll;  /* Fix for mobile smoothness */
+  }
+}
+
 
 .hero-overlay {
   background: orange;
-  width: 100%;
+  width: 100%%;
   color: orange;
   height: 100%;
   display: flex;
