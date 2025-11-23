@@ -63,7 +63,7 @@ body {
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url("image/IMG-20251122-WA0031.jpg");
+  background-image: url("image/IMG-20251122-WA0031\ \(1\).jpg");
   background-size: contain;        /* Makes image cover entire section */
   background-position: center;   /* Keeps important area centered */
   background-repeat: no-repeat;  /* Prevents tiling */
